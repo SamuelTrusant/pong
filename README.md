@@ -15,3 +15,16 @@ En este fichero creamos la clase Player que representa las raquetas de los jugad
 
 #### Pong
 En este fichero inicializamos la pelota y los dos jugadores, pintamos el entorno de juego y actualizamos los gráficos de la pelota y jugadores. A demás, esta clase llama a los métodos Move de los objetos y controla si se ha anotado para actualizar el marcador, emitir un sonido, y resetear la pelota, apuntando al jugador que haya perdido el punto. Esta clase a su vez está atenta a las pulsaciones de las teclas para controlar a los jugadores.
+
+## Vista del juego
+
+![](export.gif)
+
+## Referencias
+Guión de prácticas de CIU
+
+Referencias Processing https://processing.org/reference/
+
+Librería sound https://processing.org/reference/libraries/sound/
+
+Librería GifAnimation https://github.com/extrapixel/gif-animation
