@@ -1,6 +1,5 @@
-
 import processing.sound.*;
-import gifAnimation.*;
+//import gifAnimation.*;
 
 //tamaños
 float ballSize = 10;
@@ -22,10 +21,14 @@ boolean w, s, up, down = false;
 
 int score = 1;
 
+
 //sonidos
 SoundFile sonidoGoal;
 SoundFile sonidoWall;
 SoundFile sonidoPlayer;
+
+//GifMaker gifExport;
+int framesGif = 0;
 
 Ball ball;
 Player player1;
@@ -39,6 +42,9 @@ void setup ( ) {
   sonidoGoal = new SoundFile (this, "Alesis-S4-Plus-Clean-Gtr-C4.wav");
   sonidoWall = new SoundFile (this, "Korg-01W-MuteGuitar-C3.wav");
   sonidoPlayer = new SoundFile (this, "Korg-N1R-Harmonics-C5.wav");
+  
+  //gifExport = new GifMaker(this, "export.gif");
+  //gifExport.setRepeat(0);
 }
 
 void draw ( ) {
@@ -87,6 +93,16 @@ void draw ( ) {
     thread ("SuenaGoal");
     ball.ResetBall();
   }
+  
+  if(framesGif > 4){
+    //gifExport.addFrame();
+    framesGif = 0;
+  }
+  framesGif++;
+}
+
+void mousePressed() {
+    //gifExport.finish();
 }
 
 void SuenaGoal(){
