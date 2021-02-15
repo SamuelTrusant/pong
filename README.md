@@ -6,16 +6,15 @@ Autor: Samuel Trujillo Santana
 ## Controles
 jugador 1: 'w' y 's' para moverse arriba y abajo, respectivamente.
 jugador 2: flechas arriba y abajo para moverse.
+se puede pulsar la tecla 'r' para resetear el juego.
 
-La velocidad de la pelota y las raquetas se puede cambiar en la asignación de estas al principio, personalmente puse unas velocidades a una cantidad dificil pero abordable, aunque si es demasiado se puede bajar para probar.
+La velocidad de la pelota y las raquetas se puede cambiar en la asignación de estas al principio.
 
 los parámetros son:
 
 vPlayers = 20 velocidad de desplazamiento de los jugadores.
 
-vBall = 10 velocidad de desplazamiento de la pelota en el eje x.
-
-vyMax = 20 velocidad de desplazamiento de la pelota en el eje y (controla la inclinación máxima de la pelota, 0 la pelota va horizontalmente, subirlo para que se pueda inclinar más).
+vBall = 10 velocidad de desplazamiento de la pelota
 
 ## trabajo realizado
 El juego contiene tres ficheros para poder organizarse mejor:
