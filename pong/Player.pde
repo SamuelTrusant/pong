@@ -68,6 +68,10 @@ class Player{
   private void ChangeBallDirection(){
      float distanceToCenter = y + sizey/2 - ball.y;
      ball.vy = (-distanceToCenter / (sizey/2)) * vyMax;
-     ball.vx = -ball.vx;
+     //ball.vx = -ball.vx;
+     ball.vx = sqrt(vBall*vBall - ball.vy*ball.vy);
+     if(!isPlayer1){
+       ball.vx = -ball.vx; 
+     }
   }
 }

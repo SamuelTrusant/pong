@@ -9,7 +9,9 @@ float playerYSize = 100;
 //velocidades
 float vPlayers = 20;
 float vBall = 10;
-float vyMax = 20;
+
+
+float vyMax = 8;
 
 //tiempo entre goles
 int framesmaxWait = 80;
@@ -85,13 +87,13 @@ void draw ( ) {
   if(score == 1){
     player1.Score();
     thread ("SuenaGoal");
-    ball.ResetBall();
+    ball.ResetBall(true);
   }
   
   if(score == 2){
     player2.Score();
     thread ("SuenaGoal");
-    ball.ResetBall();
+    ball.ResetBall(false);
   }
   
   if(framesGif > 4){
@@ -125,6 +127,9 @@ void keyPressed(){
     case 's':
       s = true;
     break;
+    case 'r':
+      ResetScores();
+      break;
   }
   if ( key == CODED){
     if ( keyCode == UP){
@@ -155,4 +160,13 @@ void keyReleased(){
       }
     }
   }
+}
+
+void ResetScores() {
+  player1.score = 0;
+  player2.score = 0;
+  score = -1;
+  int coin = round(random(0,1));
+  boolean res = coin == 1? false:true;
+  ball.ResetBall(res);
 }
